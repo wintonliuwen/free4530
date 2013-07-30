@@ -1,0 +1,197 @@
+10
+
+dir
+37529
+svn://svn.openwrt.org/openwrt/trunk/target/linux
+svn://svn.openwrt.org/openwrt
+
+
+
+2013-07-24T08:54:41.952845Z
+37521
+blogic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3c298f89-4303-0410-b956-a3cf2f4a3e73
+
+sparc
+dir
+
+gemini
+dir
+
+adm5120
+dir
+
+mpc83xx
+dir
+
+mpc85xx
+dir
+
+mvebu
+dir
+
+at91
+dir
+
+ppc40x
+dir
+
+omap24xx
+dir
+
+ppc44x
+dir
+
+iop32x
+dir
+
+x86
+dir
+
+kirkwood
+dir
+
+uml
+dir
+
+malta
+dir
+
+brcm2708
+dir
+
+cobalt
+dir
+
+ixp4xx
+dir
+
+atheros
+dir
+
+mpc52xx
+dir
+
+au1000
+dir
+
+mcs814x
+dir
+
+brcm63xx
+dir
+
+generic
+dir
+
+Makefile
+file
+
+
+
+
+2013-07-25T12:49:03.286199Z
+55fb5f5cfdb9d1cfb51fc1b22e4dbdec
+2010-08-06T21:36:35.923261Z
+22518
+lars
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+373
+
+realview
+dir
+
+brcm47xx
+dir
+
+cns3xxx
+dir
+
+omap4
+dir
+
+imx6
+dir
+
+amazon
+dir
+
+orion
+dir
+
+xburst
+dir
+
+lantiq
+dir
+
+pxa
+dir
+
+bcm53xx
+dir
+
+ar7
+dir
+
+ar71xx
+dir
+
+ramips
+dir
+
+rb532
+dir
+
+avr32
+dir
+
+adm8668
+dir
+
+sibyte
+dir
+
+ep93xx
+dir
+
+imx23
+dir
+
+cns21xx
+dir
+
