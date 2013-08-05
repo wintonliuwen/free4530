@@ -988,7 +988,7 @@ $(eval $(call SingleProfile,TPLINK-LZMA,$(fs_64kraw),TLWR1041,tl-wr1041n-v2,TL-W
 $(eval $(call SingleProfile,TPLINK-LZMA,$(fs_64kraw),TLWR2543,tl-wr2543-v1,TL-WR2543N,ttyS0,115200,0x25430001,1,8Mlzma,-v 3.13.99))
 $(eval $(call SingleProfile,TPLINK-LZMA,$(fs_64kraw),TLWDR3500V1,tl-wdr3500-v1,TL-WDR3500,ttyS0,115200,0x35000001,1,8Mlzma))
 $(eval $(call SingleProfile,TPLINK-LZMA,$(fs_64kraw),TLWDR3600V1,tl-wdr3600-v1,TL-WDR4300,ttyS0,115200,0x36000001,1,8Mlzma))
-$(eval $(call SingleProfile,TPLINK-LZMA,$(fs_64kraw),TLWDR4300V1,tl-wdr4300-v1,TL-WDR4300,ttyS0,115200,0x45300001,1,8Mlzma))
+$(eval $(call SingleProfile,TPLINK-LZMA,$(fs_64kraw),TLWDR4300V1,tl-wdr4300-v1,TL-WDR4300,ttyS0,115200,0x45300001,1,16Mlzma))
 $(eval $(call SingleProfile,TPLINK-LZMA,$(fs_64kraw),TLWDR4310V1,tl-wdr4310-v1,TL-WDR4300,ttyS0,115200,0x43100001,1,8Mlzma))
 
 $(eval $(call SingleProfile,UAPPRO,$(fs_64k),UAPPRO,ubnt-uap-pro,UAP-PRO,ttyS0,115200,BZ,BZ,ar934x))
