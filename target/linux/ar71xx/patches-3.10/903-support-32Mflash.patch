@@ -1,0 +1,31 @@
+diff -Nur linux-3.10.2-backup/drivers/mtd/devices/m25p80.c linux-3.10.2/drivers/mtd/devices/m25p80.c
+--- linux-3.10.2-backup/drivers/mtd/devices/m25p80.c	2013-08-05 14:28:55.856974234 +0800
++++ linux-3.10.2/drivers/mtd/devices/m25p80.c	2013-08-05 14:46:06.029000612 +0800
+@@ -1137,6 +1137,11 @@
+ 	struct m25p	*flash = dev_get_drvdata(&spi->dev);
+ 	int		status;
+ 
++	const struct spi_device_id *id = spi_get_device_id(spi);
++	struct flash_info *info = (void *)id->driver_data;
++	// return 3-btye address mode so hardware FTLs don't get confused.
++	set_4byte(flash, info->jedec_id, 0);
++
+ 	/* Clean up MTD stuff. */
+ 	status = mtd_device_unregister(&flash->mtd);
+ 	if (status == 0) {
+diff -Nur linux-3.10.2-backup/drivers/spi/spi-ath79.c linux-3.10.2/drivers/spi/spi-ath79.c
+--- linux-3.10.2-backup/drivers/spi/spi-ath79.c	2013-08-05 14:28:58.492974302 +0800
++++ linux-3.10.2/drivers/spi/spi-ath79.c	2013-08-05 14:46:51.161001768 +0800
+@@ -335,9 +335,9 @@
+ 		return ret;
+ 
+ 	cdata = spi->controller_data;
+-	if (cdata->is_flash)
+-		sp->bitbang.txrx_bufs = ath79_spi_txrx_bufs;
+-	else
++	//if (cdata->is_flash)
++	//	sp->bitbang.txrx_bufs = ath79_spi_txrx_bufs;
++	//else
+ 		sp->bitbang.txrx_bufs = spi_bitbang_bufs;
+ 
+ 	return ret;
