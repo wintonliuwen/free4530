@@ -1,0 +1,31 @@
+From ef30ade6b4f2b8ec369057ecfb888a49ca0a1294 Mon Sep 17 00:00:00 2001
+From: "winton.liu" <newtonliuwen@gmail.com>
+Date: Mon, 12 Aug 2013 16:35:17 +0800
+Subject: [PATCH 2/3] don't use memcpy to restore macaddr
+
+it has an mac value already.
+
+Signed-off-by: winton.liu <newtonliuwen@gmail.com>
+---
+ drivers/net/wireless/ath/ath9k/init.c |    3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/drivers/net/wireless/ath/ath9k/init.c b/drivers/net/wireless/ath/ath9k/init.c
+index 95547ae..8969279 100644
+--- a/drivers/net/wireless/ath/ath9k/init.c
++++ b/drivers/net/wireless/ath/ath9k/init.c
+@@ -674,8 +674,11 @@ static int ath9k_init_softc(u16 devid, struct ath_softc *sc,
+ 	if (ret)
+ 		goto err_hw;
+ 
++	// comment out the memcpy to get macaddr, it has value already
++/*
+ 	if (pdata && pdata->macaddr)
+ 		memcpy(common->macaddr, pdata->macaddr, ETH_ALEN);
++*/
+ 
+ 	ret = ath9k_init_queues(sc);
+ 	if (ret)
+-- 
+1.7.9.5
+
