@@ -1,0 +1,8 @@
+$(eval $(call PackageDir,nodogsplash,nodogsplash))
+$(eval $(call PackageDir,olsrd,olsrd))
+$(eval $(call PackageDir,batmand,batmand))
+$(eval $(call PackageDir,luci-app-bmx6,luci-app-bmx6))
+$(eval $(call PackageDir,bmx6,bmx6))
+$(eval $(call PackageDir,batman-adv,batman-adv))
+$(eval $(call PackageDir,ndppd,ndppd))
+$(eval $(call PackageDir,quagga,quagga))

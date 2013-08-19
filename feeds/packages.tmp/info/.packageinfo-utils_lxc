@@ -1,0 +1,483 @@
+Source-Makefile: feeds/packages/utils/lxc/Makefile
+Package: lxc
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common +lxc-hooks +lxc-init +lxc-templates +liblxc +lxc-attach +lxc-cgroup +lxc-checkpoint +lxc-console +lxc-execute +lxc-freeze +lxc-info +lxc-kill +lxc-monitor +lxc-restart +lxc-start +lxc-stop +lxc-unfreeze +lxc-unshare +lxc-wait +lxc-checkconfig +lxc-clone +lxc-create +lxc-destroy +lxc-ls +lxc-netstat +lxc-ps +lxc-shutdown +lxc-version
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description:  LXC is the userspace control package for Linux Containers, a lightweight
+ virtual system mechanism sometimes described as "chroot on steroids".
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-common
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: LXC common files
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: LXC common files
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-hooks
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: LXC virtual machine hooks
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: LXC virtual machine hooks
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-init
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +libpthread +libcap +liblxc
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-init from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-init from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-templates
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @BROKEN
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: LXC virtual machine templates
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: LXC virtual machine templates
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: liblxc
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +libpthread +libcap
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Title: LXC userspace library
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: LXC userspace library
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-attach
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common +libpthread +libcap +liblxc
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-attach from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-attach from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-cgroup
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common +libpthread +libcap +liblxc
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-cgroup from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-cgroup from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-checkpoint
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common +libpthread +libcap +liblxc @BROKEN
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-checkpoint from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-checkpoint from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-console
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common +libpthread +libcap +liblxc
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-console from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-console from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-execute
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common +libpthread +libcap +liblxc
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-execute from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-execute from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-freeze
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common +libpthread +libcap +liblxc
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-freeze from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-freeze from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-info
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common +libpthread +libcap +liblxc
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-info from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-info from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-kill
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common +libpthread +libcap +liblxc
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-kill from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-kill from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-monitor
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common +libpthread +libcap +liblxc
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-monitor from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-monitor from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-restart
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common +libpthread +libcap +liblxc @BROKEN
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-restart from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-restart from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-start
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common +libpthread +libcap +liblxc
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-start from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-start from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-stop
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common +libpthread +libcap +liblxc
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-stop from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-stop from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-unfreeze
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common +libpthread +libcap +liblxc
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-unfreeze from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-unfreeze from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-unshare
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common +libpthread +libcap +liblxc
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-unshare from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-unshare from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-wait
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common +libpthread +libcap +liblxc
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-wait from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-wait from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-checkconfig
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-checkconfig from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-checkconfig from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-clone
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common @BROKEN
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-clone from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-clone from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-create
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common @BROKEN
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-create from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-create from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-destroy
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common @BROKEN
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-destroy from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-destroy from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-ls
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-ls from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-ls from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-netstat
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-netstat from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-netstat from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-ps
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-ps from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-ps from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-shutdown
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common +lxc-info +lxc-wait @BROKEN
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-shutdown from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-shutdown from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+Package: lxc-version
+Version: 2013-05-16-e9831f83532184caa119f830eee54728084444ba
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +lxc-common
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility lxc-version from the LXC userspace tools
+Maintainer: Luka Perkov <luka@openwrt.org>
+Source: lxc-2013-05-16-e9831f83532184caa119f830eee54728084444ba.tar.gz
+Type: ipkg
+Description: Utility lxc-version from the LXC userspace tools
+http://lxc.sourceforge.net/
+Luka Perkov <luka@openwrt.org>
+@@
+
+

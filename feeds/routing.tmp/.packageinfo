@@ -1,0 +1,766 @@
+Source-Makefile: feeds/routing/nodogsplash/Makefile
+Package: nodogsplash
+Submenu: Captive Portals
+Version: 0.9_beta9.9.9-pre-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +libpthread +iptables-mod-ipopt
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Open public network gateway daemon
+Maintainer: 
+Source: nodogsplash-0.9_beta9.9.9-pre.tar.gz
+Type: ipkg
+Description: 	Nodogsplash offers a simple way to open a free hotspot providing
+	restricted access to an internet connection.
+https://github.com/nodogsplash/nodogsplash
+
+@@
+
+
+Source-Makefile: feeds/routing/olsrd/Makefile
+Package: olsrd
+Menu: 1
+Submenu: Routing and Redirection
+Version: 0.6.5.4-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +libpthread
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: OLSR (Optimized Link State Routing) daemon
+Maintainer: Saverio Proto <zioproto@gmail.com>
+Source: olsrd-0.6.5.4.tar.bz2
+Type: ipkg
+Description: OLSR (Optimized Link State Routing) daemon
+http://www.olsr.org/
+Saverio Proto <zioproto@gmail.com>
+@@
+
+Package: olsrd-mod-arprefresh
+Submenu: Routing and Redirection
+Version: 0.6.5.4-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread olsrd
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Kernel ARP cache refresh plugin
+Maintainer: Saverio Proto <zioproto@gmail.com>
+Source: olsrd-0.6.5.4.tar.bz2
+Type: ipkg
+Description: Kernel ARP cache refresh plugin
+http://www.olsr.org/
+Saverio Proto <zioproto@gmail.com>
+@@
+
+Package: olsrd-mod-dot-draw
+Submenu: Routing and Redirection
+Version: 0.6.5.4-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread olsrd
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Dot topology information plugin
+Maintainer: Saverio Proto <zioproto@gmail.com>
+Source: olsrd-0.6.5.4.tar.bz2
+Type: ipkg
+Description: Dot topology information plugin
+http://www.olsr.org/
+Saverio Proto <zioproto@gmail.com>
+@@
+
+Package: olsrd-mod-bmf
+Submenu: Routing and Redirection
+Version: 0.6.5.4-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread olsrd +kmod-tun
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Basic multicast forwarding plugin
+Maintainer: Saverio Proto <zioproto@gmail.com>
+Source: olsrd-0.6.5.4.tar.bz2
+Type: ipkg
+Description: Basic multicast forwarding plugin
+http://www.olsr.org/
+Saverio Proto <zioproto@gmail.com>
+@@
+
+Package: olsrd-mod-dyn-gw
+Submenu: Routing and Redirection
+Version: 0.6.5.4-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread olsrd
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Dynamic internet gateway plugin
+Maintainer: Saverio Proto <zioproto@gmail.com>
+Source: olsrd-0.6.5.4.tar.bz2
+Type: ipkg
+Description: Dynamic internet gateway plugin
+http://www.olsr.org/
+Saverio Proto <zioproto@gmail.com>
+@@
+
+Package: olsrd-mod-dyn-gw-plain
+Submenu: Routing and Redirection
+Version: 0.6.5.4-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread olsrd
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Dynamic internet gateway plain plugin
+Maintainer: Saverio Proto <zioproto@gmail.com>
+Source: olsrd-0.6.5.4.tar.bz2
+Type: ipkg
+Description: Dynamic internet gateway plain plugin
+http://www.olsr.org/
+Saverio Proto <zioproto@gmail.com>
+@@
+
+Package: olsrd-mod-httpinfo
+Submenu: Routing and Redirection
+Version: 0.6.5.4-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread olsrd
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Small informative web server plugin
+Maintainer: Saverio Proto <zioproto@gmail.com>
+Source: olsrd-0.6.5.4.tar.bz2
+Type: ipkg
+Description: Small informative web server plugin
+http://www.olsr.org/
+Saverio Proto <zioproto@gmail.com>
+@@
+
+Package: olsrd-mod-jsoninfo
+Submenu: Routing and Redirection
+Version: 0.6.5.4-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread olsrd
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Small informative plugin with JSON output
+Maintainer: Saverio Proto <zioproto@gmail.com>
+Source: olsrd-0.6.5.4.tar.bz2
+Type: ipkg
+Description: Small informative plugin with JSON output
+http://www.olsr.org/
+Saverio Proto <zioproto@gmail.com>
+@@
+
+Package: olsrd-mod-mdns
+Submenu: Routing and Redirection
+Version: 0.6.5.4-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread olsrd
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: MDNS/Zeroconf/Bonjour packet distribution 
+Maintainer: Saverio Proto <zioproto@gmail.com>
+Source: olsrd-0.6.5.4.tar.bz2
+Type: ipkg
+Description: MDNS/Zeroconf/Bonjour packet distribution 
+http://www.olsr.org/
+Saverio Proto <zioproto@gmail.com>
+@@
+
+Package: olsrd-mod-nameservice
+Submenu: Routing and Redirection
+Version: 0.6.5.4-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread olsrd
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Lightweight hostname resolver plugin
+Maintainer: Saverio Proto <zioproto@gmail.com>
+Source: olsrd-0.6.5.4.tar.bz2
+Type: ipkg
+Description: Lightweight hostname resolver plugin
+http://www.olsr.org/
+Saverio Proto <zioproto@gmail.com>
+@@
+
+Package: olsrd-mod-p2pd
+Submenu: Routing and Redirection
+Version: 0.6.5.4-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread olsrd
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Peer to Peer Discovery plugin
+Maintainer: Saverio Proto <zioproto@gmail.com>
+Source: olsrd-0.6.5.4.tar.bz2
+Type: ipkg
+Description: Peer to Peer Discovery plugin
+http://www.olsr.org/
+Saverio Proto <zioproto@gmail.com>
+@@
+
+Package: olsrd-mod-pgraph
+Submenu: Routing and Redirection
+Version: 0.6.5.4-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread olsrd
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: output network topology for pgraph
+Maintainer: Saverio Proto <zioproto@gmail.com>
+Source: olsrd-0.6.5.4.tar.bz2
+Type: ipkg
+Description: output network topology for pgraph
+http://www.olsr.org/
+Saverio Proto <zioproto@gmail.com>
+@@
+
+Package: olsrd-mod-pud
+Submenu: Routing and Redirection
+Version: 0.6.5.4-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread olsrd
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Position Update Distribution plugin
+Maintainer: Saverio Proto <zioproto@gmail.com>
+Source: olsrd-0.6.5.4.tar.bz2
+Type: ipkg
+Description: Position Update Distribution plugin
+http://www.olsr.org/
+Saverio Proto <zioproto@gmail.com>
+@@
+
+Package: olsrd-mod-quagga
+Submenu: Routing and Redirection
+Version: 0.6.5.4-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread olsrd
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Quagga plugin
+Maintainer: Saverio Proto <zioproto@gmail.com>
+Source: olsrd-0.6.5.4.tar.bz2
+Type: ipkg
+Description: Quagga plugin
+http://www.olsr.org/
+Saverio Proto <zioproto@gmail.com>
+@@
+
+Package: olsrd-mod-secure
+Submenu: Routing and Redirection
+Version: 0.6.5.4-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread olsrd
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Message signing plugin to secure routing domain
+Maintainer: Saverio Proto <zioproto@gmail.com>
+Source: olsrd-0.6.5.4.tar.bz2
+Type: ipkg
+Description: Message signing plugin to secure routing domain
+http://www.olsr.org/
+Saverio Proto <zioproto@gmail.com>
+@@
+
+Package: olsrd-mod-sgwdynspeed
+Submenu: Routing and Redirection
+Version: 0.6.5.4-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread olsrd
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Smart Gateway dynamic speed plugin
+Maintainer: Saverio Proto <zioproto@gmail.com>
+Source: olsrd-0.6.5.4.tar.bz2
+Type: ipkg
+Description: Smart Gateway dynamic speed plugin
+http://www.olsr.org/
+Saverio Proto <zioproto@gmail.com>
+@@
+
+Package: olsrd-mod-txtinfo
+Submenu: Routing and Redirection
+Version: 0.6.5.4-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread olsrd
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Small informative web server plugin
+Maintainer: Saverio Proto <zioproto@gmail.com>
+Source: olsrd-0.6.5.4.tar.bz2
+Type: ipkg
+Description: Small informative web server plugin
+http://www.olsr.org/
+Saverio Proto <zioproto@gmail.com>
+@@
+
+Package: olsrd-mod-watchdog
+Submenu: Routing and Redirection
+Version: 0.6.5.4-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread olsrd
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Watchdog plugin
+Maintainer: Saverio Proto <zioproto@gmail.com>
+Source: olsrd-0.6.5.4.tar.bz2
+Type: ipkg
+Description: Watchdog plugin
+http://www.olsr.org/
+Saverio Proto <zioproto@gmail.com>
+@@
+
+
+Source-Makefile: feeds/routing/batmand/Makefile
+Package: batmand
+Submenu: Routing and Redirection
+Version: r1439-2
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +libpthread +kmod-tun
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: B.A.T.M.A.N. layer 3 routing daemon
+Maintainer: Marek Lindner <lindner_marek@yahoo.de>
+Source: batmand-r1439.tar.gz
+Type: ipkg
+Description: B.A.T.M.A.N. layer 3 routing daemon
+http://www.open-mesh.org/
+Marek Lindner <lindner_marek@yahoo.de>
+@@
+
+Package: vis
+Submenu: Routing and Redirection
+Version: r1439-2
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +libpthread
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: visualization server for B.A.T.M.A.N. layer 3
+Maintainer: Marek Lindner <lindner_marek@yahoo.de>
+Source: batmand-r1439.tar.gz
+Type: ipkg
+Description: visualization server for B.A.T.M.A.N. layer 3
+http://www.open-mesh.org/
+Marek Lindner <lindner_marek@yahoo.de>
+@@
+
+Package: kmod-batgat
+Submenu: Network Support
+Version: <LINUX_VERSION>+r1439-2
+Depends: +batmand @BROKEN
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: B.A.T.M.A.N. gateway module
+Maintainer: Marek Lindner <lindner_marek@yahoo.de>
+Source: batmand-r1439.tar.gz
+Type: ipkg
+Description: Kernel gateway module for B.A.T.M.A.N. for better tunnel performance
+http://www.open-mesh.org/
+Marek Lindner <lindner_marek@yahoo.de>
+@@
+
+
+Source-Makefile: feeds/routing/luci-app-bmx6/Makefile
+Package: luci-app-bmx6
+Submenu: 3. Applications
+Version: 2
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +luci-lib-json +luci-mod-admin-core +luci-lib-httpclient +bmx6
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Title: bmx6 configuration, status and visualization module
+Maintainer: Pau Escrich <p4u@dabax.net>
+Source: 
+Type: ipkg
+Description: 	bmx6 web module for LuCi web interface
+Pau Escrich <p4u@dabax.net>
+@@
+
+
+Source-Makefile: feeds/routing/bmx6/Makefile
+Package: bmx6
+Menu: 1
+Submenu: Routing and Redirection
+Version: r2013080406-4
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +kmod-ip6-tunnel +kmod-iptunnel6 +kmod-tun
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: BMX6 layer 3 routing daemon
+Maintainer: Axel Neumann <neumann@cgws.de>
+Source: bmx6-r2013080406.tar.gz
+Type: ipkg
+Description: BMX6 layer 3 routing daemon supporting IPv4, IPv6, and IPv4 over IPv6
+http://bmx6.net/
+Axel Neumann <neumann@cgws.de>
+@@
+
+Package: bmx6-uci-config
+Submenu: Routing and Redirection
+Version: r2013080406-4
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread bmx6 +libuci
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: configuration plugin based on uci (recommended!)
+Maintainer: Axel Neumann <neumann@cgws.de>
+Source: bmx6-r2013080406.tar.gz
+Type: ipkg
+Description: configuration plugin based on uci (recommended!)
+http://bmx6.net/
+Axel Neumann <neumann@cgws.de>
+@@
+
+Package: bmx6-json
+Submenu: Routing and Redirection
+Version: r2013080406-4
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread bmx6 +libjson
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: json plugin based on jsonc
+Maintainer: Axel Neumann <neumann@cgws.de>
+Source: bmx6-r2013080406.tar.gz
+Type: ipkg
+Description: json plugin based on jsonc
+http://bmx6.net/
+Axel Neumann <neumann@cgws.de>
+@@
+
+Package: bmx6-sms
+Submenu: Routing and Redirection
+Version: r2013080406-4
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread bmx6
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: sms plugin
+Maintainer: Axel Neumann <neumann@cgws.de>
+Source: bmx6-r2013080406.tar.gz
+Type: ipkg
+Description: sms plugin
+http://bmx6.net/
+Axel Neumann <neumann@cgws.de>
+@@
+
+Package: bmx6-quagga
+Submenu: Routing and Redirection
+Version: r2013080406-4
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread bmx6 +qmp-quagga @BROKEN
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: bmx6 quagga plugin to redistribute/export routes (needs manet/bmx6 patched quagga 0.99.21)
+Maintainer: Axel Neumann <neumann@cgws.de>
+Source: bmx6-r2013080406.tar.gz
+Type: ipkg
+Description: bmx6 quagga plugin to redistribute/export routes (needs manet/bmx6 patched quagga 0.99.21)
+http://bmx6.net/
+Axel Neumann <neumann@cgws.de>
+@@
+
+
+Source-Makefile: feeds/routing/batman-adv/Makefile
+Package: kmod-batman-adv
+Submenu: Network Support
+Version: <LINUX_VERSION>+2013.3.0-5
+Depends: +kmod-lib-crc16 +kmod-crypto-core +kmod-crypto-crc32c +kmod-lib-crc32c +libc
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: B.A.T.M.A.N. Adv
+Maintainer: Marek Lindner <lindner_marek@yahoo.de>
+Source: batman-adv-2013.3.0.tar.gz
+Type: ipkg
+Description: B.A.T.M.A.N. advanced is a kernel module which allows to
+build layer 2 mesh networks. This package contains the
+version 2013.3.0 of the kernel module plus its user space
+configuration & managerment tool batctl.
+http://www.open-mesh.org/
+Marek Lindner <lindner_marek@yahoo.de>
+@@
+Config:
+	source "feeds/routing/batman-adv/Config.in"
+@@
+
+
+Source-Makefile: feeds/routing/ndppd/Makefile
+Package: ndppd
+Version: 0.2.2-2
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +kmod-ipv6 +USE_UCLIBCXX:uclibcxx +USE_LIBSTDCXX:libstdcpp
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: NDP Proxy Daemon
+Maintainer: Gabriel Kerneis <kerneis@pps.jussieu.fr>
+Source: ndppd-0.2.2.tar.gz
+Type: ipkg
+Description:  ndppd, or NDP Proxy Daemon, is a daemon that proxies NDP (Neighbor Discovery
+ Protocol) messages between interfaces.  ndppd currently only supports Neighbor
+ Solicitation Messages and Neighbor Advertisement Messages.
+
+ The ndp_proxy provided by Linux doesn't support listing proxies, and only hosts
+ are supported.  No subnets.  ndppd solves this by listening for Neighbor
+ Solicitation messages on an interface, then query the internal interfaces for
+ that target IP before finally sending a Neighbor Advertisement message.
+http://www.priv.nu/projects/ndppd/
+Gabriel Kerneis <kerneis@pps.jussieu.fr>
+@@
+
+
+Source-Makefile: feeds/routing/quagga/Makefile
+Package: quagga
+Menu: 1
+Submenu: Routing and Redirection
+Version: 0.99.22.3-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +librt
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: The Quagga Software Routing Suite
+Maintainer: Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+Source: quagga-0.99.22.3.tar.gz
+Type: ipkg
+Description:   A routing software package that provides TCP/IP based routing services
+  with routing protocols support such as RIPv1, RIPv2, RIPng, OSPFv2,
+  OSPFv3, BGP-4, and BGP-4+
+http://www.quagga.net
+Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+@@
+
+Package: quagga-libzebra
+Submenu: Routing and Redirection
+Version: 0.99.22.3-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread quagga
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: zebra library
+Maintainer: Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+Source: quagga-0.99.22.3.tar.gz
+Type: ipkg
+Description: zebra library
+http://www.quagga.net
+Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+@@
+
+Package: quagga-libospf
+Submenu: Routing and Redirection
+Version: 0.99.22.3-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread quagga
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: OSPF library
+Maintainer: Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+Source: quagga-0.99.22.3.tar.gz
+Type: ipkg
+Description: OSPF library
+http://www.quagga.net
+Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+@@
+
+Package: quagga-watchquagga
+Submenu: Routing and Redirection
+Default: y if PACKAGE_quagga
+Version: 0.99.22.3-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread quagga +quagga-libzebra
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Quagga watchdog
+Maintainer: Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+Source: quagga-0.99.22.3.tar.gz
+Type: ipkg
+Description: Quagga watchdog
+http://www.quagga.net
+Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+@@
+
+Package: quagga-zebra
+Submenu: Routing and Redirection
+Default: y if PACKAGE_quagga
+Version: 0.99.22.3-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread quagga +quagga-libzebra
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Zebra daemon
+Maintainer: Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+Source: quagga-0.99.22.3.tar.gz
+Type: ipkg
+Description: Zebra daemon
+http://www.quagga.net
+Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+@@
+
+Package: quagga-bgpd
+Submenu: Routing and Redirection
+Version: 0.99.22.3-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread quagga +quagga-libzebra
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: BGPv4, BGPv4+, BGPv4- routing engine
+Maintainer: Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+Source: quagga-0.99.22.3.tar.gz
+Type: ipkg
+Description: BGPv4, BGPv4+, BGPv4- routing engine
+http://www.quagga.net
+Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+@@
+
+Package: quagga-isisd
+Submenu: Routing and Redirection
+Version: 0.99.22.3-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread quagga +quagga-libzebra
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: IS-IS routing engine
+Maintainer: Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+Source: quagga-0.99.22.3.tar.gz
+Type: ipkg
+Description: IS-IS routing engine
+http://www.quagga.net
+Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+@@
+
+Package: quagga-ospfd
+Submenu: Routing and Redirection
+Version: 0.99.22.3-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread quagga +quagga-libospf +quagga-libzebra
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: OSPFv2 routing engine
+Maintainer: Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+Source: quagga-0.99.22.3.tar.gz
+Type: ipkg
+Description: OSPFv2 routing engine
+http://www.quagga.net
+Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+@@
+
+Package: quagga-ospf6d
+Submenu: Routing and Redirection
+Version: 0.99.22.3-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread quagga +quagga-libospf +quagga-libzebra @IPV6
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: OSPFv3 routing engine
+Maintainer: Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+Source: quagga-0.99.22.3.tar.gz
+Type: ipkg
+Description: OSPFv3 routing engine
+http://www.quagga.net
+Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+@@
+
+Package: quagga-ripd
+Submenu: Routing and Redirection
+Version: 0.99.22.3-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread quagga +quagga-libzebra
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: RIP routing engine
+Maintainer: Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+Source: quagga-0.99.22.3.tar.gz
+Type: ipkg
+Description: RIP routing engine
+http://www.quagga.net
+Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+@@
+
+Package: quagga-ripngd
+Submenu: Routing and Redirection
+Version: 0.99.22.3-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread quagga +quagga-libzebra @IPV6
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: RIPNG routing engine
+Maintainer: Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+Source: quagga-0.99.22.3.tar.gz
+Type: ipkg
+Description: RIPNG routing engine
+http://www.quagga.net
+Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+@@
+
+Package: quagga-babeld
+Submenu: Routing and Redirection
+Version: 0.99.22.3-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread quagga +quagga-libzebra @IPV6
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Babel routing engine
+Maintainer: Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+Source: quagga-0.99.22.3.tar.gz
+Type: ipkg
+Description: Babel routing engine
+http://www.quagga.net
+Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+@@
+
+Package: quagga-vtysh
+Submenu: Routing and Redirection
+Version: 0.99.22.3-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread quagga +quagga-libzebra +libreadline +libncurses
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: integrated shell for Quagga routing software
+Maintainer: Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+Source: quagga-0.99.22.3.tar.gz
+Type: ipkg
+Description: integrated shell for Quagga routing software
+http://www.quagga.net
+Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+@@
+
+
