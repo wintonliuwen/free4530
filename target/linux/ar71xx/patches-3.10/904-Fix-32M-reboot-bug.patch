@@ -1,0 +1,30 @@
+From 8fe2211307acc4e0a07d6119e6afc52c88b6148c Mon Sep 17 00:00:00 2001
+From: "winton.liu" <newtonliuwen@gmail.com>
+Date: Wed, 4 Sep 2013 16:37:53 +0800
+Subject: [PATCH] Fix 32M reboot bug
+
+Main Cause: m25p80 remove to return 3byte address mode failed, and that's because jedec id is wrong.
+
+Solution:Use jedec_probe to get spi_device_id
+
+Signed-off-by: winton.liu <newtonliuwen@gmail.com>
+---
+ drivers/mtd/devices/m25p80.c |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drivers/mtd/devices/m25p80.c b/drivers/mtd/devices/m25p80.c
+index ec76543..d157bd7 100644
+--- a/drivers/mtd/devices/m25p80.c
++++ b/drivers/mtd/devices/m25p80.c
+@@ -1137,7 +1137,7 @@ static int m25p_remove(struct spi_device *spi)
+ 	struct m25p	*flash = dev_get_drvdata(&spi->dev);
+ 	int		status;
+ 
+-	const struct spi_device_id *id = spi_get_device_id(spi);
++	const struct spi_device_id *id = jedec_probe(spi);
+ 	struct flash_info *info = (void *)id->driver_data;
+ 	// return 3-btye address mode so hardware FTLs don't get confused.
+ 	set_4byte(flash, info->jedec_id, 0);
+-- 
+1.7.9.5
+
