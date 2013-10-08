@@ -1,0 +1,48 @@
+From f95f93b77f9ba782e83bd64d10dbc38ebbb25c98 Mon Sep 17 00:00:00 2001
+From: "winton.liu" <newtonliuwen@gmail.com>
+Date: Tue, 8 Oct 2013 14:53:51 +0800
+Subject: [PATCH] Fix the bug of two 2.4g radio.
+
+Cause:
+	The 5g art data isn't read.
+
+Solution:
+	Phy0 read from 0x1000 and phy1 read from 0x5000.
+
+Signed-off-by: winton.liu <newtonliuwen@gmail.com>
+---
+ drivers/net/wireless/ath/ath9k/ar9003_eeprom.c |   11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+
+diff --git a/drivers/net/wireless/ath/ath9k/ar9003_eeprom.c b/drivers/net/wireless/ath/ath9k/ar9003_eeprom.c
+index 605fbbc..4c43078 100644
+--- a/drivers/net/wireless/ath/ath9k/ar9003_eeprom.c
++++ b/drivers/net/wireless/ath/ath9k/ar9003_eeprom.c
+@@ -2941,6 +2941,7 @@ static int ar9300_eeprom_restore_mtd(struct ath_hw *ah, u8 *mptr,
+                                        int mdata_size)
+ {
+         struct ath_common *common = ath9k_hw_common(ah);
++		struct wiphy *phyx = common->hw->wiphy;
+         int num;
+         struct mtd_info *mtd_info = NULL;
+         size_t written;
+@@ -2969,8 +2970,14 @@ static int ar9300_eeprom_restore_mtd(struct ath_hw *ah, u8 *mptr,
+ 
+         // all that remains now, is copying to mptr..
+ //        printk("fetch from mtd %s: %d bytes to %0x8x",mtd_info->name,mdata_size,(u32) mptr);
+-
+-        mtd_read(mtd_info, 0x1000, mdata_size, &written, mptr);
++		// phy0 is 2.4g and phy1 is 5g,  art position for 2.4g: 0x1000 5g:0x5000
++		printk("phyname:%s\n", wiphy_name(phyx));
++		if (!strcmp("phy0",wiphy_name(phyx)))
++	        mtd_read(mtd_info, 0x1000, mdata_size, &written, mptr);
++		else if (!strcmp("phy1", wiphy_name(phyx)))
++			mtd_read(mtd_info, 0x5000, mdata_size, &written, mptr);
++		else
++			return -1;
+         put_mtd_device(mtd_info);
+         return 0;
+ }
+-- 
+1.7.9.5
+
